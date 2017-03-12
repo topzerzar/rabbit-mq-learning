@@ -1,33 +1,36 @@
 #rabbit-mq-learning
 
-##Build Setup
-
-*install dependencies
+install dependencies
 ```
 npm install
 ```
 
-*start docker
+start docker
 ```
 docker-compose up
 ```
 
-*shell to docker container
+shell to docker container
 ```
 docker exec -it [docker ContainerName or ContainerID] sh
 ```
 
-*goto path app
+goto path app
 ```
 cd usr/app
 ```
 
-*start receiver
+start receiver
 ```
 node receiver.js
 ```
 
-*start sender
+start sender
 ```
 node sender.js
 ```
+
+อ่านรายละเอียดเพิ่มเติม
+------
+
+[Blog RabbitMQ](https://medium.com/p/36e1fcc1f7b5/edit)
