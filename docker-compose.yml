@@ -1,0 +1,24 @@
+version: '2'
+
+#### NodeJS Container ####
+services:
+    nodejs:
+        image: node:6.9.5-alpine
+        tty: true
+        volumes:
+            - ".:/usr/app"
+
+#### RabbitMQ Container ####
+    rabbitmq:
+        image: rabbitmq:management-alpine
+        tty: true
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+
+#### Add more Containers below ####
+# use [ docker network create microservicenetwork ] เพื่อสร้าง mapmagiccloud(your network name) network ขึ้นมาก่อน
+networks:
+    default:
+        external:
+            name: microservicenetwork
